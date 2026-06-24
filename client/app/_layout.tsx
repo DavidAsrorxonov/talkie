@@ -1,10 +1,10 @@
 import { Redirect, Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import * as SplashScreen from "expo-splash-screen";
+// import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 
-SplashScreen.preventAutoHideAsync();
+// SplashScreen.preventAutoHideAsync();
 
 function AuthGuard() {
   const router = useRouter();
@@ -24,7 +24,7 @@ function AuthGuard() {
       router.replace("/(tabs)");
     }
 
-    SplashScreen.hideAsync();
+    // SplashScreen.hideAsync();
   }, [isSignedIn, segments]);
 
   return null;
